@@ -1,7 +1,10 @@
 body {
-	height: 100vh;
+	min-height: 100vh;
+	overflow: scroll;
 	margin: 0;
 	display: flex;
+	gap:2vh;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-color: black;
@@ -12,7 +15,25 @@ body {
 	font-family: 'Boston Traffic';
 	letter-spacing: 2vw;
 	font-size: 5rem;
+}
+
+.reveal {
 	animation: reveal 2s forwards;
+}
+
+.link {
+	font-family: "Boston Traffic";
+	text-align: center;
+	color: white;
+	font-size: 50px;
+	background-color: black;
+	padding: 0.5vw;
+	border-radius: 1vmin;
+	transition: filter 200ms;
+}
+
+.link:hover {
+	filter: invert()
 }
 
 @keyframes reveal {
