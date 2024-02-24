@@ -1,0 +1,25 @@
+body {
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+}
+
+.redirectingText {
+	color: white;
+	font-family: 'Boston Traffic';
+	letter-spacing: 2vw;
+	font-size: 5rem;
+	animation: reveal 2s forwards;
+}
+
+@keyframes reveal {
+    0% {
+		filter: blur(10px);
+	}
+	100% {
+		filter: blur(0px);	
+	}
+}
