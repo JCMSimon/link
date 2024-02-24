@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const availableRedirects = Object.keys(redirects)
     if (availableRedirects.includes(destination.toLowerCase())) {
         infoElem.textContent = `going to ${destination}`
-        setTimeout(() => window.location.href = redirects[destination], 3500);
+        setTimeout(() => window.location.href = redirects[destination], 2000);
     } else {
         if (destination == "") {
             infoElem.textContent = `no redirect found`
