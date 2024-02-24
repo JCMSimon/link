@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async function () {
     // Get some ~~bitches~~ vars
-    const destination = window.location.pathname.substring(1);
-    // const destination = "github";
+    // const destination = window.location.pathname.substring(1);
+    const destination = "";
     const infoElem = document.getElementById("redirectingText")
     const bodyElem = document.getElementById("mybodymyhtmlchoice")
     // Load json file with redirects
@@ -10,9 +10,14 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Process and use data
     const availableRedirects = Object.keys(redirects)
     if (availableRedirects.includes(destination.toLowerCase())) {
-        infoElem.textContent = `Going to ${destination}`
+        infoElem.textContent = `going to ${destination}`
+        setTimeout(() => window.location.href = redirects[destination], 3500);
     } else {
-        infoElem.textContent = `${destination} not found`
+        if (destination == "") {
+            infoElem.textContent = `no redirect found`
+        } else {
+            infoElem.textContent = `${destination} not found`
+        }
         for (let index = 0; index < availableRedirects.length; index++) {
             const redirect = availableRedirects[index];
             newLink = makeLink(redirect)
