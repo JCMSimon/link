@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     infoElem = document.getElementsByClassName("redirectText")[0]
     if (destination == "") {
         // no redirect
-        infoElem.text = "No redirect found"
+        infoElem.textContent = "No redirect found"
         } else {
             infoElem.textContent = `Going to ${destination}`    
         }
