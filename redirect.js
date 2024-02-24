@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", async function () {
     // Get some ~~bitches~~ vars
-    // const destination = window.location.pathname.substring(1);
-    const destination = "";
+    const destination = window.location.pathname.substring(1);
     const infoElem = document.getElementById("redirectingText")
     const bodyElem = document.getElementById("mybodymyhtmlchoice")
     // Load json file with redirects
