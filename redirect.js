@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", async function () {
     // Get some ~~bitches~~ vars
+    console.log(window.location.pathname)
+    console.log(window.location.pathname.substring(1))
     const destination = window.location.pathname.substring(1);
-    const restURL = window.location.pathname.substring(2)
+    console.log(destination)    
     const infoElem = document.getElementById("redirectingText")
     const bodyElem = document.getElementById("mybodymyhtmlchoice")
     // Load json file with redirects
@@ -10,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Process and use data
     const availableRedirects = Object.keys(redirects)
     if (availableRedirects.includes(destination.toLowerCase())) {
-        infoElem.textContent = `going to ${destination} ({restURL})`
+        infoElem.textContent = `going to ${destination}`
         setTimeout(() => window.location.href = redirects[destination], 2000);
     } else {
         if (destination == "") {
